@@ -23,8 +23,13 @@ export function fetchCountries(name) {
             const values = Object.values(country.languages);
         countryInfo.innerHTML = `<p class="country-category">Capital: <span class="country-details"> ${country.capital}</span></p>
         <p class="country-category">Population: <span class="country-details">${numFormatter(country.population)}</span></p>
-        <p class="country-category">Languages: <span class="country-details"> ${values}</span></p> `
-        countryInfo.style.transform = "translate(0%)"
+        <p class="country-category">Languages: <span class="country-details"> ${values}</span></p> `;
+        countryInfo.style.transform = "translate(0%)";
+        countryInfo.style.backgroundImage = `url(${country.flags.svg})`;
+        countryInfo.style.backgroundSize = "90px";
+        countryInfo.style.backgroundRepeat = "no-repeat";
+        countryInfo.style.backgroundPosition = "right top";
+
     
     })
     }
