@@ -7,9 +7,13 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-image: linear-gradient(to bottom right,
+  white 10%,
+  rgb(138, 136, 136)
+  );
   color: #212121;
   line-height: 1.5;
+  height: 100vh
 }
 
 #search-box {
@@ -18,3 +22,30 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+.country {list-style: none;
+font-size: 24px; 
+font-weight: bold}
+
+.country-svg {margin-right: 10px}
+
+.header {color: rgb(68, 65, 65); 
+text-shadow: rgb(228, 220, 220) 5px 1px}
+
+.country-category {padding-left: 30px; 
+  font-weight: bold; 
+font-size: 18px}
+
+.country-details {color:rgb(74, 37, 3); 
+margin-left: 30px;}
+
+.country-info {
+min-width: 100px; 
+background-color: rgb(168, 168, 161); 
+display: flex; 
+flex-direction: column; 
+max-width: 350px; 
+border-radius: 4px; 
+transition-property: transform;
+transition-duration: 1000ms;
+transform: translate(-150%)}
