@@ -25,12 +25,18 @@ body {
 
 .country {list-style: none;
 font-size: 24px; 
-font-weight: bold}
+font-weight: bold; }
+
+.country-name:hover {cursor: pointer; 
+  margin-left: 5px
+
+}
 
 .country-svg {margin-right: 10px}
 
 .header {color: rgb(68, 65, 65); 
 text-shadow: rgb(228, 220, 220) 5px 1px}
+
 
 .country-category {padding-left: 30px; 
   font-weight: bold; 

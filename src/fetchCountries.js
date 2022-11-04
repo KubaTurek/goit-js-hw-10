@@ -3,6 +3,8 @@ import Notiflix from 'notiflix';
 const countryList = document.querySelector('.country-list');
 const countryInfo = document.querySelector('.country-info');
 
+
+
 export function fetchCountries(name) {
   fetch(FETCH_URL + name + '?fields=name,capital,population,flags,languages')
     .then(response => response.json())
@@ -11,7 +13,7 @@ export function fetchCountries(name) {
       let countryMarkup = [];
       countries.forEach(country => {
         console.log(country.name.common);
-        countryMarkup += `<li class="country"><img class="country-svg" src="${country.flags.svg}" height="18px"></img>${country.name.common}</li>`;
+        countryMarkup += `<li class="country"><span class="country-name"><img class="country-svg" src="${country.flags.svg}" height="18px"></img>${country.name.common}</span></li>`;
       });
 
       if(countries.length > 10) {
@@ -29,8 +31,6 @@ export function fetchCountries(name) {
         countryInfo.style.backgroundSize = "90px";
         countryInfo.style.backgroundRepeat = "no-repeat";
         countryInfo.style.backgroundPosition = "right top";
-
-    
     })
     }
     if(countries.length !== 1) {
@@ -53,4 +53,5 @@ function numFormatter(num) {
         return (num/1000000).toFixed(1) + ' Mln'; // convert to M for number from > 1 million 
     }else if(num < 900){
         return num; // if value < 1000, nothing to do
-    }}
+    }};
+
